@@ -82,7 +82,7 @@ function Footer() {
               Contact
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/oTiya1"
               target="_blank"
               rel="noreferrer"
               className="transition hover:text-white"
@@ -405,24 +405,24 @@ export default function Page() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(198,166,107,0.16),_transparent_35%),radial-gradient(circle_at_80%_20%,_rgba(255,255,255,0.08),_transparent_20%),linear-gradient(to_bottom,_rgba(255,255,255,0.02),_transparent)]" />
           <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] [background-size:72px_72px]" />
 
-          <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-7xl flex-col justify-center px-6 py-32 sm:px-10 sm:py-36 lg:px-16 lg:py-40">
+          <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-7xl flex-col justify-center px-5 pt-20 pb-16 sm:px-10 sm:py-36 lg:px-16 lg:py-40">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="mb-8 inline-flex w-fit items-center gap-2 rounded-full border border-[#c6a66b]/30 bg-[#c6a66b]/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-[#e7d2a2]"
+              className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#c6a66b]/30 bg-[#c6a66b]/10 px-3 py-2 text-[10px] uppercase tracking-[0.22em] text-[#e7d2a2] sm:mb-8 sm:px-4 sm:text-xs sm:tracking-[0.3em]"
             >
               <Sparkles className="h-3.5 w-3.5" />
               UI Designer + Web & Mobile App Developer
             </motion.div>
 
-            <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_0.65fr]">
+            <div className="grid items-start gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:gap-14">
               <div>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1, duration: 0.8 }}
-                  className="mb-5 text-sm uppercase tracking-[0.45em] text-white/50"
+                  className="mb-4 text-[11px] uppercase tracking-[0.28em] text-white/50 sm:mb-5 sm:text-sm sm:tracking-[0.45em]"
                 >
                   Falaiye Oluwadamilare Oluwajuwon
                 </motion.p>
@@ -431,7 +431,7 @@ export default function Page() {
                   initial={{ opacity: 0, y: 24 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.15, duration: 0.8 }}
-                  className="max-w-5xl font-serif text-5xl leading-[1.02] text-white sm:text-6xl lg:text-8xl"
+                  className="max-w-5xl font-serif text-[2.7rem] leading-[0.98] text-white sm:text-6xl lg:text-8xl"
                 >
                   I craft{" "}
                   <span className="text-[#c6a66b]">
@@ -444,7 +444,7 @@ export default function Page() {
                   initial={{ opacity: 0, y: 24 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.25, duration: 0.8 }}
-                  className="mt-8 max-w-2xl text-base leading-8 text-white/70 sm:text-lg"
+                  className="mt-6 max-w-2xl text-[15px] leading-7 text-white/70 sm:mt-8 sm:text-lg sm:leading-8"
                 >
                   I am a design-conscious developer focused on building
                   beautiful, interactive, and modern web experiences. My work
@@ -456,11 +456,11 @@ export default function Page() {
                   initial={{ opacity: 0, y: 24 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.35, duration: 0.8 }}
-                  className="mt-10 flex flex-col gap-4 sm:flex-row"
+                  className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4"
                 >
                   <a
                     href="#projects"
-                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#c6a66b] px-7 py-4 text-sm font-medium text-black transition hover:scale-[1.02]"
+                    className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-[#c6a66b] px-6 py-3.5 text-sm font-medium text-black transition hover:scale-[1.02] sm:px-7 sm:py-4"
                   >
                     View Projects
                     <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
@@ -468,7 +468,7 @@ export default function Page() {
 
                   <a
                     href="#contact"
-                    className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-medium text-white transition hover:border-[#c6a66b]/50 hover:bg-white/10"
+                    className="inline-flex min-h-[52px] items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-medium text-white transition hover:border-[#c6a66b]/50 hover:bg-white/10 sm:px-7 sm:py-4"
                   >
                     Get In Touch
                   </a>
@@ -479,15 +479,15 @@ export default function Page() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.9 }}
-                className="relative"
+                className="relative mx-auto w-full max-w-[22rem] lg:mx-0 lg:max-w-none"
               >
-                <div className="absolute -inset-3 rounded-[2.2rem] bg-[radial-gradient(circle_at_top,_rgba(198,166,107,0.22),_transparent_45%)] blur-2xl" />
+                <div className="absolute -inset-2 rounded-[2.2rem] bg-[radial-gradient(circle_at_top,_rgba(198,166,107,0.22),_transparent_45%)] blur-2xl sm:-inset-3" />
 
-                <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.04] p-4 backdrop-blur-md">
-                  <div className="relative overflow-hidden rounded-[1.7rem] border border-[#c6a66b]/20 bg-[#05070b]/40">
+                <div className="relative rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-3 backdrop-blur-md sm:rounded-[2rem] sm:p-4">
+                  <div className="relative overflow-hidden rounded-[1.45rem] border border-[#c6a66b]/20 bg-[#05070b]/40 sm:rounded-[1.7rem]">
                     <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(198,166,107,0.12),transparent_35%,rgba(255,255,255,0.04))]" />
 
-                    <div className="relative aspect-[4/5] w-full overflow-hidden">
+                    <div className="relative aspect-[4/4.6] w-full overflow-hidden sm:aspect-[4/5]">
                       <Image
                         src="/images/profile.jpg"
                         alt="Portrait of Falaiye Oluwadamilare Oluwajuwon"
@@ -497,16 +497,16 @@ export default function Page() {
                       />
                     </div>
 
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#05070b] via-[#05070b]/75 to-transparent p-5 sm:p-6">
-                      <div className="mb-3 inline-flex rounded-full border border-[#c6a66b]/30 bg-[#c6a66b]/10 px-3 py-1 text-[11px] uppercase tracking-[0.28em] text-[#e7d2a2]">
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#05070b] via-[#05070b]/80 to-transparent p-4 sm:p-6">
+                      <div className="mb-3 inline-flex rounded-full border border-[#c6a66b]/30 bg-[#c6a66b]/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-[#e7d2a2] sm:text-[11px] sm:tracking-[0.28em]">
                         Designer + Developer
                       </div>
 
-                      <p className="text-xs uppercase tracking-[0.35em] text-white/55">
+                      <p className="text-[10px] uppercase tracking-[0.24em] text-white/55 sm:text-xs sm:tracking-[0.35em]">
                         Falaiye Oluwadamilare Oluwajuwon
                       </p>
 
-                      <p className="mt-3 max-w-sm text-sm leading-6 text-white/75">
+                      <p className="mt-3 max-w-sm text-[13px] leading-5 text-white/75 sm:text-sm sm:leading-6">
                         Building refined digital experiences with a focus on
                         elegance, interaction, and modern frontend craftsmanship.
                       </p>
