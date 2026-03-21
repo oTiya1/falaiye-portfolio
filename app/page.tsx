@@ -591,7 +591,7 @@ export default function Page() {
               }}
             >
               <Sparkles className="h-3.5 w-3.5" />
-              Designer + Web & Mobile App Developer
+              Full-stack Developer
             </motion.div>
 
             <div className="grid items-start gap-12 lg:grid-cols-[1.3fr_0.7fr] lg:gap-16">
