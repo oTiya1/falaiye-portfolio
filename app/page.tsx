@@ -231,16 +231,7 @@ function Footer() {
             >
               Falaiye Oluwajuwon
             </p>
-            <p
-              className="premium-body mt-3 max-w-md text-sm leading-7"
-              style={{ color: "var(--text-muted)" }}
-            >
-              I’m a design-driven developer dedicated to crafting modern,
-              interactive web experiences that feel premium and alive. I combine
-              visual clarity, refined motion, and clean engineering to build
-              digital products that are both beautiful and thoughtfully
-              executed.
-            </p>
+           
           </div>
 
           <div
@@ -591,7 +582,7 @@ export default function Page() {
               }}
             >
               <Sparkles className="h-3.5 w-3.5" />
-              Full-stack Developer
+              Designer + Developer
             </motion.div>
 
             <div className="grid items-start gap-12 lg:grid-cols-[1.3fr_0.7fr] lg:gap-16">
@@ -653,24 +644,10 @@ export default function Page() {
                             "linear-gradient(to top, rgba(10,15,31,0.98), rgba(10,15,31,0.9), rgba(10,15,31,0.2), transparent)",
                         }}
                       >
-                        <div
-                          className="mb-3 inline-flex rounded-full border px-3 py-1 text-[10px] uppercase tracking-[0.2em] sm:text-[11px] sm:tracking-[0.26em]"
-                          style={{
-                            borderColor: "rgba(59, 130, 246, 0.35)",
-                            backgroundColor: "rgba(59, 130, 246, 0.16)",
-                            color: "#dbeafe",
-                          }}
-                        >
-                         Falaiye Oluwajuwon
-                        </div>
-
-                        <p className="overlay-readable text-[10px] uppercase tracking-[0.24em] sm:text-xs sm:tracking-[0.35em]">
-                          Designer + Developer
-                        </p>
 
                         <p className="premium-body overlay-readable mt-3 max-w-sm text-[13px] leading-6 sm:text-sm">
                           Building refined digital experiences with a focus on
-                          elegance, interaction, and modern frontend
+                          elegance, performance, and modern frontend
                           craftsmanship.
                         </p>
                       </div>
@@ -699,8 +676,8 @@ export default function Page() {
                   className="premium-body mt-6 max-w-2xl text-[15px] leading-7 sm:mt-8 sm:text-lg sm:leading-8"
                   style={{ color: "var(--text-muted)" }}
                 >
-                  I’m a design-driven developer dedicated to crafting modern,
-                  interactive web experiences that feel premium and alive. I
+                  I’m a design-driven Web & Mobile App developer dedicated to crafting modern,
+                  interactive digital experiences that feel premium and alive. I
                   combine visual clarity, refined motion, and clean engineering
                   to build digital products that are both beautiful and
                   thoughtfully executed.
@@ -807,25 +784,10 @@ export default function Page() {
                           "linear-gradient(to top, rgba(10,15,31,0.98), rgba(10,15,31,0.9), rgba(10,15,31,0.2), transparent)",
                       }}
                     >
-                      <div
-                        className="mb-3 inline-flex rounded-full border px-3 py-1 text-[10px] uppercase tracking-[0.2em] sm:text-[11px] sm:tracking-[0.26em]"
-                        style={{
-                          borderColor: "rgba(59, 130, 246, 0.35)",
-                          backgroundColor: "rgba(59, 130, 246, 0.16)",
-                          color: "#dbeafe",
-                        }}
-                      >
-                        Falaiye Oluwajuwon
-                      </div>
-
-                      <p className="overlay-readable text-[10px] uppercase tracking-[0.24em] sm:text-xs sm:tracking-[0.35em]">
-                        Designer + Developer
-                      </p>
 
                       <p className="premium-body overlay-readable mt-3 max-w-sm text-[13px] leading-6 sm:text-sm">
                         Building refined digital experiences with a focus on
-                        elegance, interaction, and modern frontend
-                        craftsmanship.
+                        elegance, performance, and modern craftsmanship.
                       </p>
                     </div>
                   </div>
@@ -893,7 +855,7 @@ export default function Page() {
                   className="mt-4 font-serif text-4xl sm:text-5xl"
                   style={{ color: "var(--text-main)" }}
                 >
-                  Projects with presence
+                  Projects With Presence
                 </h2>
               </div>
 
@@ -1007,7 +969,7 @@ export default function Page() {
                         className="inline-flex items-center gap-2 text-sm transition duration-300 group-hover:translate-x-1"
                         style={{ color: "var(--primary)" }}
                       >
-                        Explore project
+                        Explore Project
                         <ArrowRight className="h-4 w-4" />
                       </span>
                     </div>
@@ -1018,40 +980,74 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-16">
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-            <div>
-              <p
-                className="text-sm uppercase tracking-[0.35em]"
-                style={{ color: "var(--primary)" }}
-              >
-                Capabilities
-              </p>
-              <h2
-                className="mt-4 font-serif text-4xl sm:text-5xl"
-                style={{ color: "var(--text-main)" }}
-              >
-                Built with taste and intention
-              </h2>
-            </div>
+      <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-16">
+  <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+    <div>
+      <p
+        className="text-sm uppercase tracking-[0.35em]"
+        style={{ color: "var(--primary)" }}
+      >
+        Capabilities
+      </p>
+      <h2
+        className="mt-4 font-serif text-4xl sm:text-5xl"
+        style={{ color: "var(--text-main)" }}
+      >
+        Built With Taste & Intention
+      </h2>
+    </div>
 
-            <div className="flex flex-wrap gap-3">
-              {skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="premium-body rounded-full border px-5 py-3 text-sm transition duration-300"
-                  style={{
-                    borderColor: "var(--stroke)",
-                    backgroundColor: "var(--surface)",
-                    color: "rgba(229, 231, 235, 0.85)",
-                  }}
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
+    {/* UPDATED GRID */}
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+      {[
+        {
+          label: "UI/UX Design",
+          bg: "rgb(59, 131, 246)",
+          border: "rgba(59,130,246,0.25)",
+        },
+        {
+          label: "Frontend Development",
+          bg: "rgba(26, 30, 243, 0.99)",
+          border: "rgba(99,102,241,0.25)",
+        },
+        {
+          label: "Backend Development",
+          bg: "rgba(114, 243, 8, 0.75)",
+          border: "rgba(15, 194, 134, 0.25)",
+        },
+        {
+          label: "Full Stack Development",
+          bg: "rgba(193, 12, 209, 0.99)",
+          border: "rgba(168,85,247,0.25)",
+        },
+        {
+          label: "Motion Design",
+          bg: "rgba(245, 229, 9, 0.86)",
+          border: "rgb(218, 233, 14)",
+        },
+        {
+          label: "Brand Presentation",
+          bg: "rgba(228, 18, 11, 0.8)",
+          border: "rgba(204, 32, 20, 0.67)",
+        },
+      ].map((skill) => (
+        <div
+          key={skill.label}
+          className="flex items-center justify-center rounded-2xl border px-5 py-5 text-center text-sm font-medium transition duration-300 hover:scale-[1.03]"
+          style={{
+            borderColor: skill.border,
+            backgroundColor: skill.bg,
+            color: "var(--text-main)",
+          }}
+        >
+          <span className="premium-body leading-tight">
+            {skill.label}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         <section
           id="contact"
