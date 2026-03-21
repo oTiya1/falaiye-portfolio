@@ -56,7 +56,7 @@ const projects: Project[] = [
     description:
       "A mission-driven web application created to support outreach, communicate impact, and strengthen engagement for a non-profit organization.",
     stack: ["Laravel", "Inertia.js", "Responsive Design"],
-    year: "2026",
+    year: "2025",
     status: "Completed",
     overview:
       "Built for a non-profit organization, this platform emphasizes trust, accessibility, and clarity while helping visitors understand the foundation’s work, values, and community impact.",
@@ -76,7 +76,7 @@ const projects: Project[] = [
     description:
       "A product-centered website designed to showcase offerings with strong branding, vibrant presentation, and a polished shopping-style experience.",
     stack: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    year: "2026",
+    year: "2025",
     status: "Completed",
     overview:
       "This project was built to give a brand a modern digital presence through visually engaging layouts, confident product presentation, and a clean, professional interface.",
@@ -96,7 +96,7 @@ const projects: Project[] = [
     description:
       "A professional corporate website built to communicate energy services, technical credibility, and a dependable business presence.",
     stack: ["HTML", "CSS", "JavaScript"],
-    year: "2026",
+    year: "2024",
     status: "Completed",
     overview:
       "Created for an energy solutions brand, this website focuses on clarity, trust, and professionalism while presenting services, expertise, and business value in a straightforward way.",
@@ -116,7 +116,7 @@ const projects: Project[] = [
     description:
       "A community-oriented website designed to represent a social club through clear communication, event visibility, and an inviting digital presence.",
     stack: ["HTML", "CSS", "JavaScript"],
-    year: "2026",
+    year: "2025",
     status: "Completed",
     overview:
       "Built for a social club, this project highlights connection, identity, and community participation through a clean layout that supports announcements, activities, and member engagement.",
@@ -647,7 +647,7 @@ export default function Page() {
 
                         <p className="premium-body overlay-readable mt-3 max-w-sm text-[13px] leading-6 sm:text-sm">
                           Building refined digital experiences with a focus on
-                          elegance, performance, and modern frontend
+                          elegance, performance, and modern software
                           craftsmanship.
                         </p>
                       </div>
@@ -787,7 +787,7 @@ export default function Page() {
 
                       <p className="premium-body overlay-readable mt-3 max-w-sm text-[13px] leading-6 sm:text-sm">
                         Building refined digital experiences with a focus on
-                        elegance, performance, and modern craftsmanship.
+                        elegance, performance, and modern software craftsmanship.
                       </p>
                     </div>
                   </div>
