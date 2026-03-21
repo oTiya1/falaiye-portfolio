@@ -727,9 +727,9 @@ export default function Page() {
   className="mt-10 flex flex-wrap justify-center gap-3 sm:mt-12 lg:justify-start"
 >
   {[
-    "Premium UI",
-    "Modern Frontend",
-    "Interactive Experiences",
+    "Refined UI",
+    "Intuitive Frontend",
+    "Premium Digital Solutions",
   ].map((item) => (
     <span
       key={item}
