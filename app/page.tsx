@@ -229,8 +229,13 @@ function Footer() {
               className="text-[11px] uppercase tracking-[0.32em]"
               style={{ color: "rgba(229, 231, 235, 0.55)" }}
             >
-              Falaiye Oluwajuwon
+              Falaiye Oluwajuwon 
             </p>
+             <p
+              className="text-[11px] uppercase tracking-[0.32em]"
+              style={{ color: "rgba(229, 231, 235, 0.55)" }}
+            >
+            +2349059166546, +2348126282846</p>
            
           </div>
 
@@ -1093,41 +1098,65 @@ export default function Page() {
                   <a
                     href="mailto:falaiye.oluwajuwon@email.com"
                     className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.22)] transition duration-300 hover:scale-[1.02]"
-                    style={{ backgroundColor: "var(--primary)" }}
+                    style={{
+      backgroundColor: "#cfbc0f",
+      boxShadow: "0 10px 30px rgba(214, 211, 33, 0.22)",
+    }}
                   >
                     <Mail className="h-4 w-4" />
                     Email Me
                   </a>
 
                   <a
-                    href="https://github.com/oTiya1"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm transition duration-300"
-                    style={{
-                      borderColor: "var(--stroke)",
-                      backgroundColor: "var(--background)",
-                      color: "rgba(229, 231, 235, 0.85)",
-                    }}
-                  >
-                    <Github className="h-4 w-4" />
-                    GitHub
-                  </a>
+    href="https://wa.me/2349059166546"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"
+    style={{
+      backgroundColor: "#25D366",
+      boxShadow: "0 10px 30px rgba(37, 211, 102, 0.22)",
+    }}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
+      className="h-4 w-4 fill-current"
+      aria-hidden="true"
+    >
+      <path d="M19.11 17.21c-.29-.14-1.7-.84-1.96-.94-.26-.09-.45-.14-.64.14-.19.29-.74.94-.91 1.13-.17.19-.33.21-.62.07-.29-.14-1.2-.44-2.29-1.39-.85-.76-1.42-1.69-1.58-1.98-.17-.29-.02-.45.12-.59.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-.99 2.43 0 1.43 1.04 2.82 1.19 3.01.14.19 2.04 3.11 4.93 4.36.69.29 1.22.47 1.64.6.69.22 1.32.19 1.82.12.56-.08 1.7-.69 1.94-1.35.24-.67.24-1.24.17-1.35-.07-.12-.26-.19-.55-.33Z" />
+      <path d="M16.01 3.2c-7.07 0-12.8 5.72-12.8 12.79 0 2.24.58 4.42 1.67 6.34L3.2 28.8l6.64-1.74a12.76 12.76 0 0 0 6.17 1.58h.01c7.06 0 12.79-5.73 12.79-12.8 0-3.42-1.33-6.63-3.75-9.05A12.7 12.7 0 0 0 16.01 3.2Zm0 23.29h-.01a10.6 10.6 0 0 1-5.39-1.47l-.39-.23-3.94 1.03 1.05-3.84-.25-.4a10.58 10.58 0 0 1-1.63-5.61c0-5.85 4.76-10.61 10.61-10.61 2.83 0 5.49 1.1 7.49 3.11a10.53 10.53 0 0 1 3.11 7.5c0 5.85-4.76 10.62-10.6 10.62Z" />
+    </svg>
+    WhatsApp
+  </a>
 
                   <a
-                    href="https://www.linkedin.com/in/oluwajuwon-falaiye-8a1228137/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm transition duration-300"
-                    style={{
-                      borderColor: "var(--stroke)",
-                      backgroundColor: "var(--background)",
-                      color: "rgba(229, 231, 235, 0.85)",
-                    }}
-                  >
-                    <Linkedin className="h-4 w-4" />
-                    LinkedIn
-                  </a>
+    href="https://github.com/oTiya1"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"
+    style={{
+      backgroundColor: "#181717",
+      boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
+    }}
+  >
+    <Github className="h-4 w-4" />
+    GitHub
+  </a>
+
+  {/* LinkedIn (official style) */}
+  <a
+    href="https://www.linkedin.com/in/oluwajuwon-falaiye-8a1228137/"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"
+    style={{
+      backgroundColor: "#0A66C2",
+      boxShadow: "0 10px 30px rgba(10,102,194,0.25)",
+    }}
+  >
+    <Linkedin className="h-4 w-4" />
+    LinkedIn
+  </a>
                 </div>
               </div>
             </div>
