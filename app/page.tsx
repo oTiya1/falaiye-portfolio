@@ -235,7 +235,7 @@ function Footer() {
               className="text-[11px] uppercase tracking-[0.32em]"
               style={{ color: "rgba(229, 231, 235, 0.55)" }}
             >
-            +2349059166546, +2348126282846</p>
+            +2348126282846</p>
            
           </div>
 
