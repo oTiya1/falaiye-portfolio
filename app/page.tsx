@@ -575,32 +575,36 @@ export default function Page() {
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[color:var(--background)] to-transparent" />
 
           <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-7xl flex-col justify-center px-5 pb-16 pt-20 sm:px-8 sm:py-28 lg:px-16 lg:py-36">
-            <motion.div
-              initial={{ opacity: 0, y: 22 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.75 }}
-              className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border px-3 py-2 text-[10px] uppercase tracking-[0.22em] shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset] sm:mb-8 sm:px-4 sm:text-xs sm:tracking-[0.3em]"
-              style={{
-                borderColor: "rgba(59, 130, 246, 0.25)",
-                backgroundColor: "rgba(59, 130, 246, 0.08)",
-                color: "var(--primary)",
-              }}
-            >
-              <Sparkles className="h-3.5 w-3.5" />
-              Designer + Developer
-            </motion.div>
+           <motion.div
+  initial={{ opacity: 0, y: 22 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.75 }}
+  className="mb-6 flex w-full justify-center sm:mb-8 lg:justify-start"
+>
+  <div
+    className="inline-flex items-center justify-center gap-2 rounded-full border px-4 py-2 text-center text-[10px] uppercase tracking-[0.22em] shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset] sm:px-4 sm:text-xs sm:tracking-[0.3em]"
+    style={{
+      borderColor: "rgba(59, 130, 246, 0.25)",
+      backgroundColor: "rgba(59, 130, 246, 0.08)",
+      color: "var(--primary)",
+    }}
+  >
+    <Sparkles className="h-3.5 w-3.5 shrink-0" />
+    <span className="text-center">Designer + Developer</span>
+  </div>
+</motion.div>
 
             <div className="grid items-start gap-12 lg:grid-cols-[1.3fr_0.7fr] lg:gap-16">
               <div>
-                <motion.p
-                  initial={{ opacity: 0, y: 18 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.08, duration: 0.75 }}
-                  className="mb-4 text-[11px] uppercase tracking-[0.28em] sm:text-sm sm:tracking-[0.42em]"
-                  style={{ color: "var(--text-muted)" }}
-                >
-                  Falaiye Oluwadamilare Oluwajuwon
-                </motion.p>
+            <motion.p
+  initial={{ opacity: 0, y: 18 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.08, duration: 0.75 }}
+  className="mb-4 text-center text-[11px] uppercase tracking-[0.24em] sm:text-sm sm:tracking-[0.42em] lg:text-left"
+  style={{ color: "var(--text-muted)" }}
+>
+  Falaiye Oluwadamilare Oluwajuwon
+</motion.p>
 
                 <motion.div
                   initial={{ opacity: 0, y: 22 }}
@@ -716,30 +720,30 @@ export default function Page() {
                   </a>
                 </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 22 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.42, duration: 0.8 }}
-                  className="mt-10 flex flex-wrap gap-3 sm:mt-12"
-                >
-                  {[
-                    "Refined UI",
-                    "Intuitive Frontend",
-                    "Premium Digital Solutions",
-                  ].map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full border px-4 py-2 text-xs uppercase tracking-[0.18em]"
-                      style={{
-                        borderColor: "var(--stroke)",
-                        backgroundColor: "var(--surface)",
-                        color: "var(--text-muted)",
-                      }}
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </motion.div>
+               <motion.div
+  initial={{ opacity: 0, y: 22 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.42, duration: 0.8 }}
+  className="mt-10 flex flex-wrap justify-center gap-3 sm:mt-12 lg:justify-start"
+>
+  {[
+    "Premium UI",
+    "Modern Frontend",
+    "Interactive Experiences",
+  ].map((item) => (
+    <span
+      key={item}
+      className="inline-flex min-h-[42px] items-center justify-center rounded-full border px-4 py-2 text-center text-xs uppercase tracking-[0.18em]"
+      style={{
+        borderColor: "var(--stroke)",
+        backgroundColor: "var(--surface)",
+        color: "var(--text-muted)",
+      }}
+    >
+      {item}
+    </span>
+  ))}
+</motion.div>
               </div>
 
               <motion.div
@@ -1094,16 +1098,15 @@ export default function Page() {
                   thoughtful design and strong execution.
                 </p>
 
-                <div className="mt-10 flex flex-wrap gap-4">
+                <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
                   <a
                     href="mailto:falaiye.oluwajuwon@email.com"
-                    className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.22)] transition duration-300 hover:scale-[1.02]"
-                    style={{
+className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.22)] transition duration-300 hover:scale-[1.02]"                    style={{
       backgroundColor: "#cfbc0f",
       boxShadow: "0 10px 30px rgba(214, 211, 33, 0.22)",
     }}
                   >
-                    <Mail className="h-4 w-4" />
+                    <Mail className="h-4 w-4 shrink-0" />
                     Email Me
                   </a>
 
@@ -1111,8 +1114,7 @@ export default function Page() {
     href="https://wa.me/2349059166546"
     target="_blank"
     rel="noreferrer"
-    className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"
-    style={{
+className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"    style={{
       backgroundColor: "#25D366",
       boxShadow: "0 10px 30px rgba(37, 211, 102, 0.22)",
     }}
@@ -1120,7 +1122,7 @@ export default function Page() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
-      className="h-4 w-4 fill-current"
+      className="h-4 w-4 shrink-0 fill-current"
       aria-hidden="true"
     >
       <path d="M19.11 17.21c-.29-.14-1.7-.84-1.96-.94-.26-.09-.45-.14-.64.14-.19.29-.74.94-.91 1.13-.17.19-.33.21-.62.07-.29-.14-1.2-.44-2.29-1.39-.85-.76-1.42-1.69-1.58-1.98-.17-.29-.02-.45.12-.59.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-.99 2.43 0 1.43 1.04 2.82 1.19 3.01.14.19 2.04 3.11 4.93 4.36.69.29 1.22.47 1.64.6.69.22 1.32.19 1.82.12.56-.08 1.7-.69 1.94-1.35.24-.67.24-1.24.17-1.35-.07-.12-.26-.19-.55-.33Z" />
@@ -1133,13 +1135,12 @@ export default function Page() {
     href="https://github.com/oTiya1"
     target="_blank"
     rel="noreferrer"
-    className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"
-    style={{
+className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"    style={{
       backgroundColor: "#181717",
       boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
     }}
   >
-    <Github className="h-4 w-4" />
+    <Github className="h-4 w-4 shrink-0" />
     GitHub
   </a>
 
@@ -1148,13 +1149,13 @@ export default function Page() {
     href="https://www.linkedin.com/in/oluwajuwon-falaiye-8a1228137/"
     target="_blank"
     rel="noreferrer"
-    className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"
-    style={{
+className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"
+     style={{
       backgroundColor: "#0A66C2",
       boxShadow: "0 10px 30px rgba(10,102,194,0.25)",
     }}
   >
-    <Linkedin className="h-4 w-4" />
+    <Linkedin className="h-4 w-4 shrink-0" />
     LinkedIn
   </a>
                 </div>
