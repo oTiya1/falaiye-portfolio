@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -28,7 +27,15 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="bg-[#0D0D0F] text-[#F2F2F2]">{children}</body>
+      <body
+        className="min-h-full"
+        style={{
+          backgroundColor: "var(--background)",
+          color: "var(--text-main)",
+        }}
+      >
+        {children}
+      </body>
     </html>
   );
 }

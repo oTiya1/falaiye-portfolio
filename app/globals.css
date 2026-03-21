@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0d0d0f;
-  --foreground: #f2f2f2;
-  --surface: #1a1a1d;
-  --text-secondary: #a0a0a0;
-  --accent: #d4a657;
+  --primary: #3b82f6; /* Electric Blue – CTAs, links, highlights */
+  --primary-dark: #1e40af; /* Deep Blue – hover states, emphasis */
+  --background: #0a0f1f; /* Navy Black – immersive tech backdrop */
+  --surface: #111827; /* Cards, sections */
+  --text-main: #e5e7eb; /* Main text */
+  --text-muted: #9ca3af; /* Secondary text */
+  --stroke: #1f2937; /* Borders, separators */
+
+  --foreground: var(--text-main);
 }
 
 @theme inline {
@@ -18,10 +22,23 @@
 html,
 body {
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text-main);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.premium-body {
+  font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.overlay-readable {
+  color: #f8fafc;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.45),
+    0 8px 24px rgba(0, 0, 0, 0.35);
 }
