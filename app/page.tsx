@@ -39,6 +39,9 @@ type Service = {
   points: string[];
   icon: LucideIcon;
   accent: string;
+  iconColor: string;
+  iconBg: string;
+  iconBorder: string;
 };
 
 const projects: Project[] = [
@@ -176,7 +179,10 @@ const services: Service[] = [
       "Frontend and Backend Implementation",
     ],
     icon: Laptop,
-    accent: "from-[color:var(--primary)]/16 via-cyan-400/8 to-transparent",
+    accent: "from-sky-500/20 via-cyan-400/10 to-transparent",
+    iconColor: "#38BDF8",
+    iconBg: "rgba(56, 189, 248, 0.18)",
+    iconBorder: "rgba(56, 189, 248, 0.45)",
   },
   {
     title: "Tech Services",
@@ -188,7 +194,10 @@ const services: Service[] = [
       "Cybersecurity",
     ],
     icon: Settings,
-    accent: "from-emerald-400/16 via-emerald-300/8 to-transparent",
+   accent: "from-emerald-500/20 via-green-400/10 to-transparent",
+    iconColor: "#22C55E",
+    iconBg: "rgba(34, 197, 94, 0.18)",
+    iconBorder: "rgba(34, 197, 94, 0.45)",
   },
   {
     title: "IT Consultancy",
@@ -200,7 +209,10 @@ const services: Service[] = [
       "Recommendations For Scalable Solutions",
     ],
     icon: Briefcase,
-    accent: "from-violet-400/16 via-fuchsia-300/8 to-transparent",
+   accent: "from-fuchsia-500/20 via-violet-400/10 to-transparent",
+    iconColor: "#C084FC",
+    iconBg: "rgba(192, 132, 252, 0.18)",
+    iconBorder: "rgba(192, 132, 252, 0.45)",
   },
 ];
 
@@ -700,7 +712,7 @@ export default function Page() {
                 <span className="text-center">
                   Designer + Developer + Consultant
                 </span>
-                 <Sparkles className="h-3.5 w-3.5 shrink-0" />
+                 <Sparkles className="h-3.5 w-3.5 shrink-0 -scale-x-100" />
               </div>
             </motion.div>
 
@@ -1007,19 +1019,20 @@ export default function Page() {
                       backgroundColor: "var(--background)",
                     }}
                   >
-                    <div
-                      className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl border"
-                      style={{
-                        borderColor: "var(--stroke)",
-                        backgroundColor: "rgba(255,255,255,0.03)",
-                      }}
-                    >
-                      <Icon
-                        className="h-5 w-5"
-                        style={{ color: "var(--primary)" }}
-                        aria-hidden="true"
-                      />
-                    </div>
+                <div
+  className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl border shadow-[0_0_24px_rgba(255,255,255,0.04)]"
+  style={{
+    borderColor: service.iconBorder,
+    backgroundColor: service.iconBg,
+    boxShadow: `0 0 22px ${service.iconBg}`,
+  }}
+>
+  <Icon
+    className="h-6 w-6"
+    style={{ color: service.iconColor }}
+    aria-hidden="true"
+  />
+</div>
 
                     <h3
                       className="text-2xl font-medium"
@@ -1096,7 +1109,7 @@ export default function Page() {
                   <div
                     className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold"
                     style={{
-                      backgroundColor: "rgba(59,130,246,0.12)",
+                      backgroundColor: "rgba(12, 27, 241, 0.84)",
                       color: "var(--primary)",
                     }}
                   >
