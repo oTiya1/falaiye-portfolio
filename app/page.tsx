@@ -307,7 +307,7 @@ function Navbar() {
             color: "rgba(229, 231, 235, 0.85)",
           }}
         >
-          Book a Call
+          Connect
         </a>
       </div>
     </header>
