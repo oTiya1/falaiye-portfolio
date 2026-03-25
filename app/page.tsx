@@ -183,9 +183,9 @@ const services: Service[] = [
     description:
       "Reliable technical support and digital assistance for businesses that need help maintaining, improving, and managing their online systems.",
     points: [
-      "Website updates and maintenance",
-      "System setup and digital support",
-      "Performance and UX improvements",
+      "AI Automation",
+      "Network setup and support",
+      "Cybersecurity",
     ],
     icon: Settings,
     accent: "from-emerald-400/16 via-emerald-300/8 to-transparent",
@@ -196,7 +196,7 @@ const services: Service[] = [
       "Practical technology guidance for founders, teams, and businesses that want clearer decisions, better structure, and scalable digital solutions.",
     points: [
       "Technology strategy and planning",
-      "Digital transformation advice",
+      "Digital transformation",
       "Recommendations for scalable solutions",
     ],
     icon: Briefcase,
@@ -230,17 +230,17 @@ const capabilities = [
     border: "rgba(59,130,246,0.25)",
   },
   {
-    label: "Frontend Development",
+    label: "Full Stack Development",
     bg: "rgba(26, 30, 243, 0.99)",
     border: "rgba(99,102,241,0.25)",
   },
   {
-    label: "Backend Development",
+    label: "Tech Services",
     bg: "rgba(114, 243, 8, 0.75)",
     border: "rgba(15, 194, 134, 0.25)",
   },
   {
-    label: "Full Stack Development",
+    label: "IT Consultancy",
     bg: "rgba(193, 12, 209, 0.99)",
     border: "rgba(168,85,247,0.25)",
   },
@@ -253,16 +253,6 @@ const capabilities = [
     label: "Brand Presentation",
     bg: "rgba(228, 18, 11, 0.8)",
     border: "rgba(204, 32, 20, 0.67)",
-  },
-  {
-    label: "Tech Services",
-    bg: "rgba(14, 165, 233, 0.9)",
-    border: "rgba(14,165,233,0.3)",
-  },
-  {
-    label: "IT Consultancy",
-    bg: "rgba(16, 185, 129, 0.9)",
-    border: "rgba(16,185,129,0.3)",
   },
 ];
 
@@ -346,7 +336,7 @@ function Footer() {
               className="text-[11px] uppercase tracking-[0.32em]"
               style={{ color: "rgba(229, 231, 235, 0.55)" }}
             >
-              +2349059166546
+              +2348126282846
             </p>
           </div>
 
@@ -938,7 +928,7 @@ export default function Page() {
                 className="mt-4 font-serif text-4xl sm:text-5xl"
                 style={{ color: "var(--text-main)" }}
               >
-                Designer’s eye. Developer’s mindset.
+                Designer’s Eye. Developer’s Mindset.
               </h2>
             </div>
 
@@ -985,7 +975,7 @@ export default function Page() {
                   className="mt-4 font-serif text-4xl sm:text-5xl"
                   style={{ color: "var(--text-main)" }}
                 >
-                  Services built for clients who want clarity and results.
+                  Services Built For Clients Who Want Clarity & Results.
                 </h2>
               </div>
 
