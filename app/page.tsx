@@ -167,13 +167,13 @@ const projects: Project[] = [
 
 const services: Service[] = [
   {
-    title: "Web & App Development",
+    title: "Web & Mobile App Development",
     description:
       "Premium websites and application interfaces built to help brands look credible, perform smoothly, and convert visitors into clients.",
     points: [
-      "Business websites and landing pages",
-      "Responsive web applications",
-      "Frontend and backend implementation",
+      "Business Websites and Landing Pages",
+      "Responsive Web & Mobile Applications",
+      "Frontend and Backend Implementation",
     ],
     icon: Laptop,
     accent: "from-[color:var(--primary)]/16 via-cyan-400/8 to-transparent",
@@ -184,7 +184,7 @@ const services: Service[] = [
       "Reliable technical support and digital assistance for businesses that need help maintaining, improving, and managing their online systems.",
     points: [
       "AI Automation",
-      "Network setup and support",
+      "Network Setup and Support",
       "Cybersecurity",
     ],
     icon: Settings,
@@ -195,9 +195,9 @@ const services: Service[] = [
     description:
       "Practical technology guidance for founders, teams, and businesses that want clearer decisions, better structure, and scalable digital solutions.",
     points: [
-      "Technology strategy and planning",
-      "Digital transformation",
-      "Recommendations for scalable solutions",
+      "Technology Strategy and Planning",
+      "Digital Transformation",
+      "Recommendations For Scalable Solutions",
     ],
     icon: Briefcase,
     accent: "from-violet-400/16 via-fuchsia-300/8 to-transparent",
@@ -700,6 +700,7 @@ export default function Page() {
                 <span className="text-center">
                   Designer + Developer + Consultant
                 </span>
+                 <Sparkles className="h-3.5 w-3.5 shrink-0" />
               </div>
             </motion.div>
 
