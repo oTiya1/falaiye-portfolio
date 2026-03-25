@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ComponentType, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowRight,
@@ -16,7 +16,7 @@ import {
   Briefcase,
   Laptop,
   Settings,
-  MessageSquare,
+  type LucideIcon,
 } from "lucide-react";
 
 type Project = {
@@ -37,7 +37,7 @@ type Service = {
   title: string;
   description: string;
   points: string[];
-  icon: ComponentType<{ className?: string }>;
+  icon: LucideIcon;
   accent: string;
 };
 
@@ -169,7 +169,7 @@ const services: Service[] = [
   {
     title: "Web & App Development",
     description:
-      "Custom websites and application interfaces built for performance, clarity, and conversion.",
+      "Premium websites and application interfaces built to help brands look credible, perform smoothly, and convert visitors into clients.",
     points: [
       "Business websites and landing pages",
       "Responsive web applications",
@@ -181,7 +181,7 @@ const services: Service[] = [
   {
     title: "Tech Services",
     description:
-      "Practical technical support to help brands improve digital operations and present themselves professionally online.",
+      "Reliable technical support and digital assistance for businesses that need help maintaining, improving, and managing their online systems.",
     points: [
       "Website updates and maintenance",
       "System setup and digital support",
@@ -193,7 +193,7 @@ const services: Service[] = [
   {
     title: "IT Consultancy",
     description:
-      "Clear guidance for individuals and businesses that need help making smart technology decisions.",
+      "Practical technology guidance for founders, teams, and businesses that want clearer decisions, better structure, and scalable digital solutions.",
     points: [
       "Technology strategy and planning",
       "Digital transformation advice",
@@ -346,7 +346,7 @@ function Footer() {
               className="text-[11px] uppercase tracking-[0.32em]"
               style={{ color: "rgba(229, 231, 235, 0.55)" }}
             >
-              +2348126282846
+              +2349059166546
             </p>
           </div>
 
@@ -707,7 +707,9 @@ export default function Page() {
                 }}
               >
                 <Sparkles className="h-3.5 w-3.5 shrink-0" />
-                <span className="text-center">Designer + Developer + Consultant</span>
+                <span className="text-center">
+                  Designer + Developer + Consultant
+                </span>
               </div>
             </motion.div>
 
@@ -787,11 +789,11 @@ export default function Page() {
                   className="max-w-5xl font-serif text-[2.55rem] leading-[0.96] sm:text-6xl lg:text-[5.3rem]"
                   style={{ color: "var(--text-main)" }}
                 >
-                  I craft {" "}
+                  I craft{" "}
                   <span className="bg-gradient-to-r from-[color:var(--text-main)] via-[color:var(--primary)] to-[color:var(--text-main)] bg-clip-text text-transparent">
                     premium digital experiences
                   </span>{" "}
-                  for brands that want results, credibility, and growth.
+                  that help brands grow with confidence.
                 </motion.h1>
 
                 <motion.p
@@ -801,9 +803,12 @@ export default function Page() {
                   className="premium-body mt-6 max-w-2xl text-[15px] leading-7 sm:mt-8 sm:text-lg sm:leading-8"
                   style={{ color: "var(--text-muted)" }}
                 >
-                  I’m a design-driven Web & Mobile App developer and IT consultant dedicated to crafting modern,
-                  interactive digital experiences that feel premium and alive. I also provide tech services and IT consultancy,
-                  helping individuals and businesses build, scale, and optimize their digital systems with clarity and precision.
+                  I’m a design-driven Web & Mobile App developer and IT
+                  consultant dedicated to crafting modern, interactive digital
+                  experiences that feel premium and alive. I also provide tech
+                  services and IT consultancy, helping individuals and
+                  businesses build, scale, and optimize their digital systems
+                  with clarity and precision.
                 </motion.p>
 
                 <motion.div
@@ -813,16 +818,16 @@ export default function Page() {
                   className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4"
                 >
                   <a
-                    href="#contact"
+                    href="#projects"
                     className="group inline-flex min-h-[54px] items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.22)] transition duration-300 hover:scale-[1.02] sm:px-7"
                     style={{ backgroundColor: "var(--primary)" }}
                   >
-                    Start a Project
+                    View Projects
                     <ArrowRight className="h-4 w-4 transition duration-300 group-hover:translate-x-1" />
                   </a>
 
                   <a
-                    href="#services"
+                    href="#contact"
                     className="inline-flex min-h-[54px] items-center justify-center rounded-full border px-6 py-3.5 text-sm font-medium transition duration-300 sm:px-7"
                     style={{
                       borderColor: "var(--stroke)",
@@ -830,7 +835,7 @@ export default function Page() {
                       color: "var(--text-main)",
                     }}
                   >
-                    Explore Services
+                    Get In Touch
                   </a>
                 </motion.div>
 
@@ -948,9 +953,12 @@ export default function Page() {
                 that are both visually striking and technically solid.
               </p>
               <p>
-                I am currently growing my portfolio through projects that reflect premium presentation, strong user experience,
-                and a creative product mindset. Alongside development, I also offer tech services and IT consultancy,
-                helping clients make better technology decisions, improve systems, and bring digital ideas to life with confidence.
+                I am currently growing my portfolio through projects that
+                reflect premium presentation, strong user experience, and a
+                creative product mindset. Alongside development, I also offer
+                tech services and IT consultancy, helping clients make better
+                technology decisions, improve systems, and bring digital ideas
+                to life with confidence.
               </p>
             </div>
           </div>
@@ -985,14 +993,16 @@ export default function Page() {
                 className="premium-body max-w-2xl text-sm leading-7 sm:text-base"
                 style={{ color: "var(--text-muted)" }}
               >
-                I help brands, founders, and growing businesses create premium digital products,
-                strengthen their online presence, and make smarter technology decisions.
+                I help brands, founders, and growing businesses create premium
+                digital products, strengthen their online presence, and make
+                smarter technology decisions with confidence.
               </p>
             </div>
 
             <div className="grid gap-7 lg:grid-cols-3">
               {services.map((service, index) => {
                 const Icon = service.icon;
+
                 return (
                   <motion.div
                     key={service.title}
@@ -1000,7 +1010,7 @@ export default function Page() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.2 }}
                     transition={{ duration: 0.55, delay: index * 0.08 }}
-                    className={`rounded-[1.9rem] border bg-gradient-to-br ${service.accent} p-6 shadow-[0_10px_30px_rgba(0,0,0,0.18)]`}
+                    className={`rounded-[1.9rem] border bg-gradient-to-br p-6 shadow-[0_10px_30px_rgba(0,0,0,0.18)] ${service.accent}`}
                     style={{
                       borderColor: "var(--stroke)",
                       backgroundColor: "var(--background)",
@@ -1013,7 +1023,11 @@ export default function Page() {
                         backgroundColor: "rgba(255,255,255,0.03)",
                       }}
                     >
-                      <Icon className="h-5 w-5" style={{ color: "var(--primary)" }} />
+                      <Icon
+                        className="h-5 w-5"
+                        style={{ color: "var(--primary)" }}
+                        aria-hidden="true"
+                      />
                     </div>
 
                     <h3
@@ -1043,6 +1057,7 @@ export default function Page() {
                           <CheckCircle2
                             className="mt-0.5 h-4 w-4 shrink-0"
                             style={{ color: "var(--primary)" }}
+                            aria-hidden="true"
                           />
                           <span
                             className="premium-body text-sm leading-7"
@@ -1073,11 +1088,11 @@ export default function Page() {
                 className="mt-4 font-serif text-4xl sm:text-5xl"
                 style={{ color: "var(--text-main)" }}
               >
-                A simple process that keeps projects focused.
+                A smooth process from idea to launch.
               </h2>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-5 sm:grid-cols-2">
               {processSteps.map((step, index) => (
                 <div
                   key={step.title}
@@ -1088,21 +1103,22 @@ export default function Page() {
                   }}
                 >
                   <div
-                    className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full border text-sm font-semibold"
+                    className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold"
                     style={{
-                      borderColor: "rgba(59,130,246,0.25)",
-                      backgroundColor: "rgba(59,130,246,0.08)",
+                      backgroundColor: "rgba(59,130,246,0.12)",
                       color: "var(--primary)",
                     }}
                   >
-                    0{index + 1}
+                    {index + 1}
                   </div>
+
                   <h3
-                    className="text-xl"
+                    className="text-xl font-medium"
                     style={{ color: "var(--text-main)" }}
                   >
                     {step.title}
                   </h3>
+
                   <p
                     className="premium-body mt-3 text-sm leading-7"
                     style={{ color: "var(--text-muted)" }}
@@ -1145,7 +1161,8 @@ export default function Page() {
                 style={{ color: "var(--text-muted)" }}
               >
                 A growing collection of visual, interactive, and product-focused
-                work that reflects my identity as a hybrid creative developer.
+                work that reflects my identity as a hybrid creative developer
+                and consultant.
               </p>
             </div>
 
@@ -1278,18 +1295,20 @@ export default function Page() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
               {capabilities.map((skill) => (
                 <div
                   key={skill.label}
-                  className="flex min-h-[104px] items-center justify-center rounded-2xl border px-5 py-5 text-center text-sm font-medium transition duration-300 hover:scale-[1.03]"
+                  className="flex items-center justify-center rounded-2xl border px-5 py-5 text-center text-sm font-medium transition duration-300 hover:scale-[1.03]"
                   style={{
                     borderColor: skill.border,
                     backgroundColor: skill.bg,
                     color: "var(--text-main)",
                   }}
                 >
-                  <span className="premium-body leading-tight">{skill.label}</span>
+                  <span className="premium-body leading-tight">
+                    {skill.label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -1297,14 +1316,14 @@ export default function Page() {
         </section>
 
         <section
-          className="border-y"
+          className="border-t border-b"
           style={{
             borderColor: "var(--stroke)",
             backgroundColor: "var(--surface)",
           }}
         >
           <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-16">
-            <div className="mb-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
               <div>
                 <p
                   className="text-sm uppercase tracking-[0.35em]"
@@ -1316,67 +1335,40 @@ export default function Page() {
                   className="mt-4 font-serif text-4xl sm:text-5xl"
                   style={{ color: "var(--text-main)" }}
                 >
-                  A freelance partner focused on quality and trust.
+                  More than visuals. Work that supports business goals.
                 </h2>
               </div>
-              <p
-                className="premium-body max-w-2xl text-sm leading-7 sm:text-base"
-                style={{ color: "var(--text-muted)" }}
-              >
-                I combine design thinking, technical execution, and business-minded problem solving
-                so clients get work that not only looks premium, but also supports real goals.
-              </p>
-            </div>
 
-            <div className="grid gap-5 md:grid-cols-3">
-              {[
-                {
-                  icon: MessageSquare,
-                  title: "Clear communication",
-                  text: "You get a collaborative process, regular alignment, and decisions explained with clarity.",
-                },
-                {
-                  icon: Laptop,
-                  title: "Modern execution",
-                  text: "Every build is approached with responsiveness, performance, and clean implementation in mind.",
-                },
-                {
-                  icon: Briefcase,
-                  title: "Business value",
-                  text: "I focus on solutions that strengthen your brand, improve user experience, and support growth.",
-                },
-              ].map((item) => {
-                const Icon = item.icon;
-                return (
+              <div className="grid gap-5 sm:grid-cols-2">
+                {[
+                  "Premium design thinking with practical execution",
+                  "Clear communication and client-friendly process",
+                  "Solutions built for usability, trust, and conversion",
+                  "A blend of design, development, tech support, and strategy",
+                ].map((item) => (
                   <div
-                    key={item.title}
+                    key={item}
                     className="rounded-[1.7rem] border p-6"
                     style={{
                       borderColor: "var(--stroke)",
                       backgroundColor: "var(--background)",
                     }}
                   >
-                    <div
-                      className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl border"
-                      style={{
-                        borderColor: "rgba(59,130,246,0.25)",
-                        backgroundColor: "rgba(59,130,246,0.08)",
-                      }}
-                    >
-                      <Icon className="h-5 w-5" style={{ color: "var(--primary)" }} />
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2
+                        className="mt-1 h-5 w-5 shrink-0"
+                        style={{ color: "var(--primary)" }}
+                      />
+                      <p
+                        className="premium-body text-sm leading-7"
+                        style={{ color: "var(--text-muted)" }}
+                      >
+                        {item}
+                      </p>
                     </div>
-                    <h3 className="text-xl" style={{ color: "var(--text-main)" }}>
-                      {item.title}
-                    </h3>
-                    <p
-                      className="premium-body mt-3 text-sm leading-7"
-                      style={{ color: "var(--text-muted)" }}
-                    >
-                      {item.text}
-                    </p>
                   </div>
-                );
-              })}
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -1406,40 +1398,20 @@ export default function Page() {
                 </p>
 
                 <h2
-                  className="mt-4 max-w-4xl font-serif text-4xl sm:text-5xl lg:text-6xl"
+                  className="mt-4 max-w-3xl font-serif text-4xl sm:text-5xl lg:text-6xl"
                   style={{ color: "var(--text-main)" }}
                 >
-                  Ready to elevate your brand with premium digital work?
+                  Let’s build something refined, strategic, and results-driven.
                 </h2>
 
                 <p
                   className="premium-body mt-6 max-w-2xl text-base leading-8 sm:text-lg"
                   style={{ color: "var(--text-muted)" }}
                 >
-                  Whether you need a website, tech support, or IT consultancy, I’m open to working with
-                  founders, businesses, and teams that value thoughtful execution and strong results.
+                  Whether you need a premium website, tech support, or IT
+                  consultancy, I’d love to help you bring the right digital
+                  solution to life.
                 </p>
-
-                <div className="mt-8 flex flex-wrap gap-3">
-                  {[
-                    "Web Development",
-                    "Tech Services",
-                    "IT Consultancy",
-                    "Business Websites",
-                  ].map((item) => (
-                    <span
-                      key={item}
-                      className="inline-flex min-h-[42px] items-center justify-center rounded-full border px-4 py-2 text-center text-xs uppercase tracking-[0.18em]"
-                      style={{
-                        borderColor: "var(--stroke)",
-                        backgroundColor: "var(--background)",
-                        color: "var(--text-muted)",
-                      }}
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
 
                 <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
                   <a
