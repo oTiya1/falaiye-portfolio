@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { ComponentType, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowRight,
@@ -12,6 +12,11 @@ import {
   Sparkles,
   X,
   ExternalLink,
+  CheckCircle2,
+  Briefcase,
+  Laptop,
+  Settings,
+  MessageSquare,
 } from "lucide-react";
 
 type Project = {
@@ -26,6 +31,14 @@ type Project = {
   accent: string;
   liveUrl: string;
   image: string;
+};
+
+type Service = {
+  title: string;
+  description: string;
+  points: string[];
+  icon: ComponentType<{ className?: string }>;
+  accent: string;
 };
 
 const projects: Project[] = [
@@ -152,13 +165,105 @@ const projects: Project[] = [
   },
 ];
 
-const skills = [
-  "UI/UX Design",
-  "Frontend Development",
-  "Backend Development",
-  "Software Development",
-  "Motion Design",
-  "Brand Presentation",
+const services: Service[] = [
+  {
+    title: "Web & App Development",
+    description:
+      "Custom websites and application interfaces built for performance, clarity, and conversion.",
+    points: [
+      "Business websites and landing pages",
+      "Responsive web applications",
+      "Frontend and backend implementation",
+    ],
+    icon: Laptop,
+    accent: "from-[color:var(--primary)]/16 via-cyan-400/8 to-transparent",
+  },
+  {
+    title: "Tech Services",
+    description:
+      "Practical technical support to help brands improve digital operations and present themselves professionally online.",
+    points: [
+      "Website updates and maintenance",
+      "System setup and digital support",
+      "Performance and UX improvements",
+    ],
+    icon: Settings,
+    accent: "from-emerald-400/16 via-emerald-300/8 to-transparent",
+  },
+  {
+    title: "IT Consultancy",
+    description:
+      "Clear guidance for individuals and businesses that need help making smart technology decisions.",
+    points: [
+      "Technology strategy and planning",
+      "Digital transformation advice",
+      "Recommendations for scalable solutions",
+    ],
+    icon: Briefcase,
+    accent: "from-violet-400/16 via-fuchsia-300/8 to-transparent",
+  },
+];
+
+const processSteps = [
+  {
+    title: "Discovery",
+    text: "I learn about your business, goals, audience, and the exact outcome you want to achieve.",
+  },
+  {
+    title: "Strategy",
+    text: "I define the right structure, features, and execution plan so the work is both beautiful and effective.",
+  },
+  {
+    title: "Build",
+    text: "I design and develop with a focus on clean implementation, responsiveness, and user experience.",
+  },
+  {
+    title: "Launch & Support",
+    text: "I help refine, deliver, and improve the final product so it can perform confidently in the real world.",
+  },
+];
+
+const capabilities = [
+  {
+    label: "UI/UX Design",
+    bg: "rgb(59, 131, 246)",
+    border: "rgba(59,130,246,0.25)",
+  },
+  {
+    label: "Frontend Development",
+    bg: "rgba(26, 30, 243, 0.99)",
+    border: "rgba(99,102,241,0.25)",
+  },
+  {
+    label: "Backend Development",
+    bg: "rgba(114, 243, 8, 0.75)",
+    border: "rgba(15, 194, 134, 0.25)",
+  },
+  {
+    label: "Full Stack Development",
+    bg: "rgba(193, 12, 209, 0.99)",
+    border: "rgba(168,85,247,0.25)",
+  },
+  {
+    label: "Motion Design",
+    bg: "rgba(245, 229, 9, 0.86)",
+    border: "rgb(218, 233, 14)",
+  },
+  {
+    label: "Brand Presentation",
+    bg: "rgba(228, 18, 11, 0.8)",
+    border: "rgba(204, 32, 20, 0.67)",
+  },
+  {
+    label: "Tech Services",
+    bg: "rgba(14, 165, 233, 0.9)",
+    border: "rgba(14,165,233,0.3)",
+  },
+  {
+    label: "IT Consultancy",
+    bg: "rgba(16, 185, 129, 0.9)",
+    border: "rgba(16,185,129,0.3)",
+  },
 ];
 
 function Navbar() {
@@ -184,6 +289,12 @@ function Navbar() {
           style={{ color: "var(--text-muted)" }}
         >
           <a
+            href="#services"
+            className="transition duration-300 hover:text-[color:var(--text-main)]"
+          >
+            Services
+          </a>
+          <a
             href="#projects"
             className="transition duration-300 hover:text-[color:var(--text-main)]"
           >
@@ -206,7 +317,7 @@ function Navbar() {
             color: "rgba(229, 231, 235, 0.85)",
           }}
         >
-          Connect
+          Book a Call
         </a>
       </div>
     </header>
@@ -229,20 +340,26 @@ function Footer() {
               className="text-[11px] uppercase tracking-[0.32em]"
               style={{ color: "rgba(229, 231, 235, 0.55)" }}
             >
-              Falaiye Oluwajuwon 
+              Falaiye Oluwajuwon
             </p>
-             <p
+            <p
               className="text-[11px] uppercase tracking-[0.32em]"
               style={{ color: "rgba(229, 231, 235, 0.55)" }}
             >
-            +2348126282846</p>
-           
+              +2348126282846
+            </p>
           </div>
 
           <div
             className="flex flex-wrap gap-5 text-sm"
             style={{ color: "var(--text-muted)" }}
           >
+            <a
+              href="#services"
+              className="transition duration-300 hover:text-[color:var(--text-main)]"
+            >
+              Services
+            </a>
             <a
               href="#projects"
               className="transition duration-300 hover:text-[color:var(--text-main)]"
@@ -575,36 +692,36 @@ export default function Page() {
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[color:var(--background)] to-transparent" />
 
           <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-7xl flex-col justify-center px-5 pb-16 pt-20 sm:px-8 sm:py-28 lg:px-16 lg:py-36">
-           <motion.div
-  initial={{ opacity: 0, y: 22 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.75 }}
-  className="mb-6 flex w-full justify-center sm:mb-8 lg:justify-start"
->
-  <div
-    className="inline-flex items-center justify-center gap-2 rounded-full border px-4 py-2 text-center text-[10px] uppercase tracking-[0.22em] shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset] sm:px-4 sm:text-xs sm:tracking-[0.3em]"
-    style={{
-      borderColor: "rgba(59, 130, 246, 0.25)",
-      backgroundColor: "rgba(59, 130, 246, 0.08)",
-      color: "var(--primary)",
-    }}
-  >
-    <Sparkles className="h-3.5 w-3.5 shrink-0" />
-    <span className="text-center">Designer + Developer</span>
-  </div>
-</motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75 }}
+              className="mb-6 flex w-full justify-center sm:mb-8 lg:justify-start"
+            >
+              <div
+                className="inline-flex items-center justify-center gap-2 rounded-full border px-4 py-2 text-center text-[10px] uppercase tracking-[0.22em] shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset] sm:px-4 sm:text-xs sm:tracking-[0.3em]"
+                style={{
+                  borderColor: "rgba(59, 130, 246, 0.25)",
+                  backgroundColor: "rgba(59, 130, 246, 0.08)",
+                  color: "var(--primary)",
+                }}
+              >
+                <Sparkles className="h-3.5 w-3.5 shrink-0" />
+                <span className="text-center">Designer + Developer + Consultant</span>
+              </div>
+            </motion.div>
 
             <div className="grid items-start gap-12 lg:grid-cols-[1.3fr_0.7fr] lg:gap-16">
               <div>
-            <motion.p
-  initial={{ opacity: 0, y: 18 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.08, duration: 0.75 }}
-  className="mb-4 text-center text-[11px] uppercase tracking-[0.24em] sm:text-sm sm:tracking-[0.42em] lg:text-left"
-  style={{ color: "var(--text-muted)" }}
->
-  Falaiye Oluwadamilare Oluwajuwon
-</motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 18 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.08, duration: 0.75 }}
+                  className="mb-4 text-center text-[11px] uppercase tracking-[0.24em] sm:text-sm sm:tracking-[0.42em] lg:text-left"
+                  style={{ color: "var(--text-muted)" }}
+                >
+                  Falaiye Oluwadamilare Oluwajuwon
+                </motion.p>
 
                 <motion.div
                   initial={{ opacity: 0, y: 22 }}
@@ -653,7 +770,6 @@ export default function Page() {
                             "linear-gradient(to top, rgba(10,15,31,0.98), rgba(10,15,31,0.9), rgba(10,15,31,0.2), transparent)",
                         }}
                       >
-
                         <p className="premium-body overlay-readable mt-3 max-w-sm text-[13px] leading-6 sm:text-sm">
                           Building refined digital experiences with a focus on
                           elegance, performance, and modern software
@@ -671,11 +787,11 @@ export default function Page() {
                   className="max-w-5xl font-serif text-[2.55rem] leading-[0.96] sm:text-6xl lg:text-[5.3rem]"
                   style={{ color: "var(--text-main)" }}
                 >
-                  I craft{" "}
+                  I craft {" "}
                   <span className="bg-gradient-to-r from-[color:var(--text-main)] via-[color:var(--primary)] to-[color:var(--text-main)] bg-clip-text text-transparent">
                     premium digital experiences
                   </span>{" "}
-                  where design elegance meets functional code.
+                  for brands that want results, credibility, and growth.
                 </motion.h1>
 
                 <motion.p
@@ -685,11 +801,9 @@ export default function Page() {
                   className="premium-body mt-6 max-w-2xl text-[15px] leading-7 sm:mt-8 sm:text-lg sm:leading-8"
                   style={{ color: "var(--text-muted)" }}
                 >
-                  I’m a design-driven Web & Mobile App developer dedicated to crafting modern,
-                  interactive digital experiences that feel premium and alive. I
-                  combine visual clarity, refined motion, and clean engineering
-                  to build digital products that are both beautiful and
-                  thoughtfully executed.
+                  I’m a design-driven Web & Mobile App developer and IT consultant dedicated to crafting modern,
+                  interactive digital experiences that feel premium and alive. I also provide tech services and IT consultancy,
+                  helping individuals and businesses build, scale, and optimize their digital systems with clarity and precision.
                 </motion.p>
 
                 <motion.div
@@ -699,16 +813,16 @@ export default function Page() {
                   className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4"
                 >
                   <a
-                    href="#projects"
+                    href="#contact"
                     className="group inline-flex min-h-[54px] items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.22)] transition duration-300 hover:scale-[1.02] sm:px-7"
                     style={{ backgroundColor: "var(--primary)" }}
                   >
-                    View Projects
+                    Start a Project
                     <ArrowRight className="h-4 w-4 transition duration-300 group-hover:translate-x-1" />
                   </a>
 
                   <a
-                    href="#contact"
+                    href="#services"
                     className="inline-flex min-h-[54px] items-center justify-center rounded-full border px-6 py-3.5 text-sm font-medium transition duration-300 sm:px-7"
                     style={{
                       borderColor: "var(--stroke)",
@@ -716,34 +830,35 @@ export default function Page() {
                       color: "var(--text-main)",
                     }}
                   >
-                    Get In Touch
+                    Explore Services
                   </a>
                 </motion.div>
 
-               <motion.div
-  initial={{ opacity: 0, y: 22 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.42, duration: 0.8 }}
-  className="mt-10 flex flex-wrap justify-center gap-3 sm:mt-12 lg:justify-start"
->
-  {[
-    "Refined UI",
-    "Intuitive Frontend",
-    "Premium Digital Solutions",
-  ].map((item) => (
-    <span
-      key={item}
-      className="inline-flex min-h-[42px] items-center justify-center rounded-full border px-4 py-2 text-center text-xs uppercase tracking-[0.18em]"
-      style={{
-        borderColor: "var(--stroke)",
-        backgroundColor: "var(--surface)",
-        color: "var(--text-muted)",
-      }}
-    >
-      {item}
-    </span>
-  ))}
-</motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 22 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.42, duration: 0.8 }}
+                  className="mt-10 flex flex-wrap justify-center gap-3 sm:mt-12 lg:justify-start"
+                >
+                  {[
+                    "Refined UI",
+                    "Intuitive Frontend",
+                    "Premium Digital Solutions",
+                    "IT Consultancy",
+                  ].map((item) => (
+                    <span
+                      key={item}
+                      className="inline-flex min-h-[42px] items-center justify-center rounded-full border px-4 py-2 text-center text-xs uppercase tracking-[0.18em]"
+                      style={{
+                        borderColor: "var(--stroke)",
+                        backgroundColor: "var(--surface)",
+                        color: "var(--text-muted)",
+                      }}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </motion.div>
               </div>
 
               <motion.div
@@ -793,7 +908,6 @@ export default function Page() {
                           "linear-gradient(to top, rgba(10,15,31,0.98), rgba(10,15,31,0.9), rgba(10,15,31,0.2), transparent)",
                       }}
                     >
-
                       <p className="premium-body overlay-readable mt-3 max-w-sm text-[13px] leading-6 sm:text-sm">
                         Building refined digital experiences with a focus on
                         elegance, performance, and modern software craftsmanship.
@@ -834,11 +948,169 @@ export default function Page() {
                 that are both visually striking and technically solid.
               </p>
               <p>
-                I am currently growing my portfolio through projects that
-                reflect premium presentation, strong user experience, and a
-                creative product mindset. Over time, this will expand into
-                software products, applications, and immersive game concepts.
+                I am currently growing my portfolio through projects that reflect premium presentation, strong user experience,
+                and a creative product mindset. Alongside development, I also offer tech services and IT consultancy,
+                helping clients make better technology decisions, improve systems, and bring digital ideas to life with confidence.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="services"
+          className="border-y"
+          style={{
+            borderColor: "var(--stroke)",
+            backgroundColor: "var(--surface)",
+          }}
+        >
+          <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-16">
+            <div className="mb-14 grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+              <div>
+                <p
+                  className="text-sm uppercase tracking-[0.35em]"
+                  style={{ color: "var(--primary)" }}
+                >
+                  Services
+                </p>
+                <h2
+                  className="mt-4 font-serif text-4xl sm:text-5xl"
+                  style={{ color: "var(--text-main)" }}
+                >
+                  Services built for clients who want clarity and results.
+                </h2>
+              </div>
+
+              <p
+                className="premium-body max-w-2xl text-sm leading-7 sm:text-base"
+                style={{ color: "var(--text-muted)" }}
+              >
+                I help brands, founders, and growing businesses create premium digital products,
+                strengthen their online presence, and make smarter technology decisions.
+              </p>
+            </div>
+
+            <div className="grid gap-7 lg:grid-cols-3">
+              {services.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <motion.div
+                    key={service.title}
+                    initial={{ opacity: 0, y: 22 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.55, delay: index * 0.08 }}
+                    className={`rounded-[1.9rem] border bg-gradient-to-br ${service.accent} p-6 shadow-[0_10px_30px_rgba(0,0,0,0.18)]`}
+                    style={{
+                      borderColor: "var(--stroke)",
+                      backgroundColor: "var(--background)",
+                    }}
+                  >
+                    <div
+                      className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl border"
+                      style={{
+                        borderColor: "var(--stroke)",
+                        backgroundColor: "rgba(255,255,255,0.03)",
+                      }}
+                    >
+                      <Icon className="h-5 w-5" style={{ color: "var(--primary)" }} />
+                    </div>
+
+                    <h3
+                      className="text-2xl font-medium"
+                      style={{ color: "var(--text-main)" }}
+                    >
+                      {service.title}
+                    </h3>
+
+                    <p
+                      className="premium-body mt-4 text-sm leading-7"
+                      style={{ color: "var(--text-muted)" }}
+                    >
+                      {service.description}
+                    </p>
+
+                    <div className="mt-6 grid gap-3">
+                      {service.points.map((point) => (
+                        <div
+                          key={point}
+                          className="flex items-start gap-3 rounded-2xl border px-4 py-3"
+                          style={{
+                            borderColor: "var(--stroke)",
+                            backgroundColor: "rgba(10,15,31,0.45)",
+                          }}
+                        >
+                          <CheckCircle2
+                            className="mt-0.5 h-4 w-4 shrink-0"
+                            style={{ color: "var(--primary)" }}
+                          />
+                          <span
+                            className="premium-body text-sm leading-7"
+                            style={{ color: "rgba(229, 231, 235, 0.88)" }}
+                          >
+                            {point}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-16">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+            <div>
+              <p
+                className="text-sm uppercase tracking-[0.35em]"
+                style={{ color: "var(--primary)" }}
+              >
+                Process
+              </p>
+              <h2
+                className="mt-4 font-serif text-4xl sm:text-5xl"
+                style={{ color: "var(--text-main)" }}
+              >
+                A simple process that keeps projects focused.
+              </h2>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {processSteps.map((step, index) => (
+                <div
+                  key={step.title}
+                  className="rounded-[1.7rem] border p-6"
+                  style={{
+                    borderColor: "var(--stroke)",
+                    backgroundColor: "var(--surface)",
+                  }}
+                >
+                  <div
+                    className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full border text-sm font-semibold"
+                    style={{
+                      borderColor: "rgba(59,130,246,0.25)",
+                      backgroundColor: "rgba(59,130,246,0.08)",
+                      color: "var(--primary)",
+                    }}
+                  >
+                    0{index + 1}
+                  </div>
+                  <h3
+                    className="text-xl"
+                    style={{ color: "var(--text-main)" }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p
+                    className="premium-body mt-3 text-sm leading-7"
+                    style={{ color: "var(--text-muted)" }}
+                  >
+                    {step.text}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -989,74 +1261,125 @@ export default function Page() {
           </div>
         </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-16">
-  <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-    <div>
-      <p
-        className="text-sm uppercase tracking-[0.35em]"
-        style={{ color: "var(--primary)" }}
-      >
-        Capabilities
-      </p>
-      <h2
-        className="mt-4 font-serif text-4xl sm:text-5xl"
-        style={{ color: "var(--text-main)" }}
-      >
-        Built With Taste & Intention
-      </h2>
-    </div>
+        <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-16">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+            <div>
+              <p
+                className="text-sm uppercase tracking-[0.35em]"
+                style={{ color: "var(--primary)" }}
+              >
+                Capabilities
+              </p>
+              <h2
+                className="mt-4 font-serif text-4xl sm:text-5xl"
+                style={{ color: "var(--text-main)" }}
+              >
+                Built With Taste & Intention
+              </h2>
+            </div>
 
-    {/* UPDATED GRID */}
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-      {[
-        {
-          label: "UI/UX Design",
-          bg: "rgb(59, 131, 246)",
-          border: "rgba(59,130,246,0.25)",
-        },
-        {
-          label: "Frontend Development",
-          bg: "rgba(26, 30, 243, 0.99)",
-          border: "rgba(99,102,241,0.25)",
-        },
-        {
-          label: "Backend Development",
-          bg: "rgba(114, 243, 8, 0.75)",
-          border: "rgba(15, 194, 134, 0.25)",
-        },
-        {
-          label: "Full Stack Development",
-          bg: "rgba(193, 12, 209, 0.99)",
-          border: "rgba(168,85,247,0.25)",
-        },
-        {
-          label: "Motion Design",
-          bg: "rgba(245, 229, 9, 0.86)",
-          border: "rgb(218, 233, 14)",
-        },
-        {
-          label: "Brand Presentation",
-          bg: "rgba(228, 18, 11, 0.8)",
-          border: "rgba(204, 32, 20, 0.67)",
-        },
-      ].map((skill) => (
-        <div
-          key={skill.label}
-          className="flex items-center justify-center rounded-2xl border px-5 py-5 text-center text-sm font-medium transition duration-300 hover:scale-[1.03]"
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+              {capabilities.map((skill) => (
+                <div
+                  key={skill.label}
+                  className="flex min-h-[104px] items-center justify-center rounded-2xl border px-5 py-5 text-center text-sm font-medium transition duration-300 hover:scale-[1.03]"
+                  style={{
+                    borderColor: skill.border,
+                    backgroundColor: skill.bg,
+                    color: "var(--text-main)",
+                  }}
+                >
+                  <span className="premium-body leading-tight">{skill.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="border-y"
           style={{
-            borderColor: skill.border,
-            backgroundColor: skill.bg,
-            color: "var(--text-main)",
+            borderColor: "var(--stroke)",
+            backgroundColor: "var(--surface)",
           }}
         >
-          <span className="premium-body leading-tight">
-            {skill.label}
-          </span>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+          <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-16">
+            <div className="mb-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+              <div>
+                <p
+                  className="text-sm uppercase tracking-[0.35em]"
+                  style={{ color: "var(--primary)" }}
+                >
+                  Why Work With Me
+                </p>
+                <h2
+                  className="mt-4 font-serif text-4xl sm:text-5xl"
+                  style={{ color: "var(--text-main)" }}
+                >
+                  A freelance partner focused on quality and trust.
+                </h2>
+              </div>
+              <p
+                className="premium-body max-w-2xl text-sm leading-7 sm:text-base"
+                style={{ color: "var(--text-muted)" }}
+              >
+                I combine design thinking, technical execution, and business-minded problem solving
+                so clients get work that not only looks premium, but also supports real goals.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-3">
+              {[
+                {
+                  icon: MessageSquare,
+                  title: "Clear communication",
+                  text: "You get a collaborative process, regular alignment, and decisions explained with clarity.",
+                },
+                {
+                  icon: Laptop,
+                  title: "Modern execution",
+                  text: "Every build is approached with responsiveness, performance, and clean implementation in mind.",
+                },
+                {
+                  icon: Briefcase,
+                  title: "Business value",
+                  text: "I focus on solutions that strengthen your brand, improve user experience, and support growth.",
+                },
+              ].map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={item.title}
+                    className="rounded-[1.7rem] border p-6"
+                    style={{
+                      borderColor: "var(--stroke)",
+                      backgroundColor: "var(--background)",
+                    }}
+                  >
+                    <div
+                      className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl border"
+                      style={{
+                        borderColor: "rgba(59,130,246,0.25)",
+                        backgroundColor: "rgba(59,130,246,0.08)",
+                      }}
+                    >
+                      <Icon className="h-5 w-5" style={{ color: "var(--primary)" }} />
+                    </div>
+                    <h3 className="text-xl" style={{ color: "var(--text-main)" }}>
+                      {item.title}
+                    </h3>
+                    <p
+                      className="premium-body mt-3 text-sm leading-7"
+                      style={{ color: "var(--text-muted)" }}
+                    >
+                      {item.text}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
         <section
           id="contact"
@@ -1083,81 +1406,103 @@ export default function Page() {
                 </p>
 
                 <h2
-                  className="mt-4 max-w-3xl font-serif text-4xl sm:text-5xl lg:text-6xl"
+                  className="mt-4 max-w-4xl font-serif text-4xl sm:text-5xl lg:text-6xl"
                   style={{ color: "var(--text-main)" }}
                 >
-                  Let’s build something refined, modern, and memorable.
+                  Ready to elevate your brand with premium digital work?
                 </h2>
 
                 <p
                   className="premium-body mt-6 max-w-2xl text-base leading-8 sm:text-lg"
                   style={{ color: "var(--text-muted)" }}
                 >
-                  I’m building a portfolio of premium digital work and would
-                  love to connect with people, brands, and teams who value
-                  thoughtful design and strong execution.
+                  Whether you need a website, tech support, or IT consultancy, I’m open to working with
+                  founders, businesses, and teams that value thoughtful execution and strong results.
                 </p>
+
+                <div className="mt-8 flex flex-wrap gap-3">
+                  {[
+                    "Web Development",
+                    "Tech Services",
+                    "IT Consultancy",
+                    "Business Websites",
+                  ].map((item) => (
+                    <span
+                      key={item}
+                      className="inline-flex min-h-[42px] items-center justify-center rounded-full border px-4 py-2 text-center text-xs uppercase tracking-[0.18em]"
+                      style={{
+                        borderColor: "var(--stroke)",
+                        backgroundColor: "var(--background)",
+                        color: "var(--text-muted)",
+                      }}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
 
                 <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
                   <a
                     href="mailto:falaiye.oluwajuwon@email.com"
-className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.22)] transition duration-300 hover:scale-[1.02]"                    style={{
-      backgroundColor: "#cfbc0f",
-      boxShadow: "0 10px 30px rgba(214, 211, 33, 0.22)",
-    }}
+                    className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.22)] transition duration-300 hover:scale-[1.02]"
+                    style={{
+                      backgroundColor: "#cfbc0f",
+                      boxShadow: "0 10px 30px rgba(214, 211, 33, 0.22)",
+                    }}
                   >
                     <Mail className="h-4 w-4 shrink-0" />
                     Email Me
                   </a>
 
                   <a
-    href="https://wa.me/2349059166546"
-    target="_blank"
-    rel="noreferrer"
-className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"    style={{
-      backgroundColor: "#25D366",
-      boxShadow: "0 10px 30px rgba(37, 211, 102, 0.22)",
-    }}
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 32 32"
-      className="h-4 w-4 shrink-0 fill-current"
-      aria-hidden="true"
-    >
-      <path d="M19.11 17.21c-.29-.14-1.7-.84-1.96-.94-.26-.09-.45-.14-.64.14-.19.29-.74.94-.91 1.13-.17.19-.33.21-.62.07-.29-.14-1.2-.44-2.29-1.39-.85-.76-1.42-1.69-1.58-1.98-.17-.29-.02-.45.12-.59.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-.99 2.43 0 1.43 1.04 2.82 1.19 3.01.14.19 2.04 3.11 4.93 4.36.69.29 1.22.47 1.64.6.69.22 1.32.19 1.82.12.56-.08 1.7-.69 1.94-1.35.24-.67.24-1.24.17-1.35-.07-.12-.26-.19-.55-.33Z" />
-      <path d="M16.01 3.2c-7.07 0-12.8 5.72-12.8 12.79 0 2.24.58 4.42 1.67 6.34L3.2 28.8l6.64-1.74a12.76 12.76 0 0 0 6.17 1.58h.01c7.06 0 12.79-5.73 12.79-12.8 0-3.42-1.33-6.63-3.75-9.05A12.7 12.7 0 0 0 16.01 3.2Zm0 23.29h-.01a10.6 10.6 0 0 1-5.39-1.47l-.39-.23-3.94 1.03 1.05-3.84-.25-.4a10.58 10.58 0 0 1-1.63-5.61c0-5.85 4.76-10.61 10.61-10.61 2.83 0 5.49 1.1 7.49 3.11a10.53 10.53 0 0 1 3.11 7.5c0 5.85-4.76 10.62-10.6 10.62Z" />
-    </svg>
-    WhatsApp
-  </a>
+                    href="https://wa.me/2349059166546"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"
+                    style={{
+                      backgroundColor: "#25D366",
+                      boxShadow: "0 10px 30px rgba(37, 211, 102, 0.22)",
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 32 32"
+                      className="h-4 w-4 shrink-0 fill-current"
+                      aria-hidden="true"
+                    >
+                      <path d="M19.11 17.21c-.29-.14-1.7-.84-1.96-.94-.26-.09-.45-.14-.64.14-.19.29-.74.94-.91 1.13-.17.19-.33.21-.62.07-.29-.14-1.2-.44-2.29-1.39-.85-.76-1.42-1.69-1.58-1.98-.17-.29-.02-.45.12-.59.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-.99 2.43 0 1.43 1.04 2.82 1.19 3.01.14.19 2.04 3.11 4.93 4.36.69.29 1.22.47 1.64.6.69.22 1.32.19 1.82.12.56-.08 1.7-.69 1.94-1.35.24-.67.24-1.24.17-1.35-.07-.12-.26-.19-.55-.33Z" />
+                      <path d="M16.01 3.2c-7.07 0-12.8 5.72-12.8 12.79 0 2.24.58 4.42 1.67 6.34L3.2 28.8l6.64-1.74a12.76 12.76 0 0 0 6.17 1.58h.01c7.06 0 12.79-5.73 12.79-12.8 0-3.42-1.33-6.63-3.75-9.05A12.7 12.7 0 0 0 16.01 3.2Zm0 23.29h-.01a10.6 10.6 0 0 1-5.39-1.47l-.39-.23-3.94 1.03 1.05-3.84-.25-.4a10.58 10.58 0 0 1-1.63-5.61c0-5.85 4.76-10.61 10.61-10.61 2.83 0 5.49 1.1 7.49 3.11a10.53 10.53 0 0 1 3.11 7.5c0 5.85-4.76 10.62-10.6 10.62Z" />
+                    </svg>
+                    WhatsApp
+                  </a>
 
                   <a
-    href="https://github.com/oTiya1"
-    target="_blank"
-    rel="noreferrer"
-className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"    style={{
-      backgroundColor: "#181717",
-      boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
-    }}
-  >
-    <Github className="h-4 w-4 shrink-0" />
-    GitHub
-  </a>
+                    href="https://github.com/oTiya1"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"
+                    style={{
+                      backgroundColor: "#181717",
+                      boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
+                    }}
+                  >
+                    <Github className="h-4 w-4 shrink-0" />
+                    GitHub
+                  </a>
 
-  {/* LinkedIn (official style) */}
-  <a
-    href="https://www.linkedin.com/in/oluwajuwon-falaiye-8a1228137/"
-    target="_blank"
-    rel="noreferrer"
-className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"
-     style={{
-      backgroundColor: "#0A66C2",
-      boxShadow: "0 10px 30px rgba(10,102,194,0.25)",
-    }}
-  >
-    <Linkedin className="h-4 w-4 shrink-0" />
-    LinkedIn
-  </a>
+                  <a
+                    href="https://www.linkedin.com/in/oluwajuwon-falaiye-8a1228137/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"
+                    style={{
+                      backgroundColor: "#0A66C2",
+                      boxShadow: "0 10px 30px rgba(10,102,194,0.25)",
+                    }}
+                  >
+                    <Linkedin className="h-4 w-4 shrink-0" />
+                    LinkedIn
+                  </a>
                 </div>
               </div>
             </div>
