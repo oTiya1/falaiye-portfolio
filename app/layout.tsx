@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Falaiye Oluwajuwon | Designer & Developer",
+  title: "Falaiye Oluwajuwon | Developer - IT Consultant",
   description:
     "Portfolio of Falaiye Oluwajuwon — a design-driven developer and IT Consultant building premium digital solutions.",
 };
