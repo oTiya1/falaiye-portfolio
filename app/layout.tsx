@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Falaiye Oluwajuwon | Designer & Developer",
   description:
-    "Portfolio of Falaiye Oluwajuwon — a design-driven developer building premium digital experiences.",
+    "Portfolio of Falaiye Oluwajuwon — a design-driven developer and IT Consultant building premium digital solutions.",
 };
 
 export default function RootLayout({
