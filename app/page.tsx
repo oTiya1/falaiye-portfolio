@@ -143,7 +143,7 @@ const projects: Project[] = [
       "Responsive browsing experience",
     ],
     accent: "from-[color:var(--primary)]/18 via-blue-400/8 to-transparent",
-    liveUrl: "https://marylandclub-club.com",
+    liveUrl: "https://maryland-club.com",
     image: "/images/projects/maryland-club.jpg",
   },
   {
@@ -163,7 +163,7 @@ const projects: Project[] = [
       "Scalable content structure",
     ],
     accent: "from-[color:var(--primary)]/18 via-violet-400/8 to-transparent",
-    liveUrl: "https://achihimedia.example.com",
+    liveUrl: "https://achihimedia.com.ng",
     image: "/images/projects/achihi-media.jpg",
   },
 ];
